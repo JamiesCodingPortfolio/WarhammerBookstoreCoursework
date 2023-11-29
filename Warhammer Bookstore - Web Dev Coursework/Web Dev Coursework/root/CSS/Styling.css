@@ -1,0 +1,234 @@
+/*Global settings so everything looks the same*/
+
+* {
+  /*Resets the style to a default each time it is*/
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+  }
+
+
+  body {
+    /*For browsers that don't support background images (however rare that might be)*/
+    background-color: #333A40;
+
+    background-image: url('../Images/background.jpg');
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  h1, h2 {
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  p1 {
+    margin: 0 20px;
+  }
+
+/**/
+/*Global Styles*/
+
+  header {
+    font-size: large;
+    color: #ff5349;
+    font-weight: bold;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content:flex-end;
+    font-weight: bold;
+    font-size: 24px;
+  }
+  
+  nav ul li {
+    margin: 0 10px;
+  }
+
+  nav ul li a {
+    color: azure;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+
+  nav ul li a:hover {
+    background-color: #ff5349;
+    color: azure;
+  }
+
+  header h1 {
+    margin-bottom: 0.5rem;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+  }
+
+  /*Styling so that the website can be used on other devices*/
+
+  @media only screen and (max-width: 768px){
+    div#product-container {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      justify-content: center;
+    }
+
+    div#product-container.product{
+      margin: 0;
+    }
+
+    div.product {
+      flex: 0 0 auto;
+      width: 100%;
+      margin-bottom: 1rem;
+      white-space: normal;
+    }
+    
+    .product:nth-child(odd) {
+      margin-right: 0;
+    }
+
+    nav ul {
+      font-size:22px;
+    }
+
+    body {
+      background-image: none;
+    }
+
+    /*Styling so that the text is aligned on success when on a phone screen*/
+    p.paidwith{
+      text-align: center;
+    }
+
+  }
+
+  /*Styling for the product container and products themselves*/
+
+  div#product-container {
+    padding-top: 5vh;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  
+  .product {
+    width: 48%;
+    margin-bottom: 2rem;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 5%;
+  }
+
+  .product:nth-child(odd){
+    margin-right: 2%;
+  }
+  
+  .product-name {
+    display: block;
+    color: azure;
+    margin: 2rem auto 1rem;
+  }
+  
+  .product-image {
+    display: block;
+    margin: auto;
+    text-align: center;
+    width: 200px;
+    height: auto;
+  }
+  
+  .product-description {
+    display: block;
+    color: azure;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .product-price {
+    display: block;
+    color: azure;
+    margin: auto;
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+  }
+  
+  .buy {
+    text-align: center;
+    margin: auto;
+    display: block;
+    padding: 0.5rem 1rem;
+    background-color: whitesmoke;
+    color: black;
+    border: 1px solid black;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+/*Payment Form CSS*/
+
+  div.Payment {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    padding-left: 25%;
+    padding-right: 25%;
+    align-items: center;
+    color: azure;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  button#Pay {
+    text-align: center;
+    margin:auto;
+    display: block;
+    margin-top: 10px;
+    padding: 0.5rem 1rem;
+    background-color: whitesmoke;
+    color: black;
+    border: 1px solid black;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  /*This code is purely to stop the incremential buttons from showing up*/
+  input[type=number]::-webkit-outer-spin-button,
+  input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  /*Success page CSS*/
+
+  div.success{
+    font-size: 28px;
+    color: #ff5349;
+    font-weight: bold;
+    margin: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  p.paidwith{
+    padding-top: 20px;
+  }
